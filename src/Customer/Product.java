@@ -1,12 +1,14 @@
-package Tobacoo;
-public class Cigarette {
+package Customer;
+public class Product {
     private String name;
     private int price;
     private int piece;
-    public Cigarette(String name,int price,int piece) {
+    private int pcPrice;
+    public Product(String name,int price,int piece, int pcPrice) {
         this.name = name;
         this.price = price;
         this.piece = piece;
+        this.pcPrice = pcPrice;
     }
     public String getName() {
         return name;
@@ -28,6 +30,6 @@ public class Cigarette {
     }
     @Override
     public String toString() {
-        return name + ", price " + price + ", piece " + piece;
+        return name.toUpperCase() + "  " + price + "Ft  " + piece + "X " + pcPrice + "Ft";
     }
 }
